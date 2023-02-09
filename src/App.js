@@ -16,12 +16,18 @@ function App() {
         }
         handleCollectionGeneration()
     }, [])
+
     return (
     <>
+        <label>
+            Target Number: <input type="number" min="1" max={collection.length} />
+        </label>
+        <button type="submit" value="set">Set Target Number</button>
+        <button type="submit" value="run">Run Binary Search</button>
         <div className="flex-container">
             {
                 collection ?
-                collection.map((unit) => <div key={unit} className="collection-unit"></div>)
+                collection.map((unit) => <div key={unit} className={`collection-unit unit-${unit}`}></div>)
                 :null
             }
         </div>

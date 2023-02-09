@@ -30,7 +30,6 @@ function App() {
                     $(`.collection-unit`).css("background-color","#6c757d");
                     $(`#unit-${targetNum}`).css("background-color","#ffc107");
                 }, timeout += 750);
-                return mid;
             }
             else if(collection[mid] < targetNum - 1) {
                 start = mid + 1;
@@ -50,7 +49,6 @@ function App() {
                 }, timeout += 750);
                 continue;
             }
-            return -1;
         }
 
     }

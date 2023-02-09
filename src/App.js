@@ -5,7 +5,6 @@ import './App.css';
 function App() {
     const [collection, setCollection] = useState([])
     const [targetNum, setTargetNum] = useState(0)
-    const [runStatus, setRunStatus] = useState(false)
 
     useEffect(() => {
         const handleCollectionGeneration = () => {
@@ -17,6 +16,8 @@ function App() {
         }
         handleCollectionGeneration()
     }, [])
+
+    const handleSearch = () => {}
     
     return (
     <>
@@ -28,12 +29,12 @@ function App() {
         <label>
             Target Number: <input type="number" min="1" max={collection.length} placeholder="1-1080" onChange={(e) => setTargetNum(e.target.value)} />
         </label>
-        <button type="submit" value="set" onClick={() => $(`.collection-unit`).css("background-color","#6c757d") && $(`.unit-${targetNum}`).css("background-color","crimson")}>Mark Target Number</button>
-        <button type="submit" value="run" onClick={() => setRunStatus(true)}>Run Binary Search</button>
+        <button type="submit" value="set" onClick={() => $(`.collection-unit`).css("background-color","#6c757d") && $(`#unit-${targetNum}`).css("background-color","#ffc107")}>Mark Target Number</button>
+        <button type="submit" value="run" onClick={handleSearch}>Run Binary Search</button>
         <div className="flex-container">
             {
             collection ?
-            collection.map((unit) => <div key={unit} className={`collection-unit unit-${unit}`}></div>)
+            collection.map((unit) => <div key={unit} id={`unit-${unit}`} className="collection-unit"></div>)
             :null
             }
         </div>

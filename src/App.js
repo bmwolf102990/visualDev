@@ -23,36 +23,19 @@ function App() {
         {
         targetNum < 0 || targetNum > 1080 ?
         alert("INVALID TARGET: Please enter a number between 1 and 1080...")
-        :
-        null
-        }
-        <label>
-            Target Number: 
-            <input
-                type="number"
-                min="1"
-                max={collection.length}
-                placeholder="1-1080"
-                onChange={(e) => setTargetNum(e.target.value)} 
-            />
-        </label>
-        <button
-            type="submit"
-            value="set"
-            onClick={() => 
-                $(`.collection-unit`).css("background-color","#6c757d")
-                && $(`.unit-${targetNum}`).css("background-color","crimson")
-            }>Mark Target Number</button>
-        <button
-            type="submit"
-            value="run"
-        >Run Binary Search</button>
-        <div className="flex-container">
-        {
-        collection ?
-        collection.map((unit) => <div key={unit} className={`collection-unit unit-${unit}`}></div>)
         :null
         }
+        <label>
+            Target Number: <input type="number" min="1" max={collection.length} placeholder="1-1080" onChange={(e) => setTargetNum(e.target.value)} />
+        </label>
+        <button type="submit" value="set" onClick={() => $(`.collection-unit`).css("background-color","#6c757d") && $(`.unit-${targetNum}`).css("background-color","crimson")}>Mark Target Number</button>
+        <button type="submit" value="run" onClick={() => setRunStatus(true)}>Run Binary Search</button>
+        <div className="flex-container">
+            {
+            collection ?
+            collection.map((unit) => <div key={unit} className={`collection-unit unit-${unit}`}></div>)
+            :null
+            }
         </div>
     </>
     );

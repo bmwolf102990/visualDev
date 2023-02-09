@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import $ from 'jquery'
 import './App.css';
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
         }
         handleCollectionGeneration()
     }, [])
-    console.log(targetNum)
+    
     return (
     <>
         {
@@ -26,10 +27,26 @@ function App() {
         null
         }
         <label>
-            Target Number: <input type="number" min="1" max={collection.length} placeholder="1-1080" onChange={(e) => setTargetNum(e.target.value)} />
+            Target Number: 
+            <input
+                type="number"
+                min="1"
+                max={collection.length}
+                placeholder="1-1080"
+                onChange={(e) => setTargetNum(e.target.value)} 
+            />
         </label>
-        <button type="submit" value="set">Set Target Number</button>
-        <button type="submit" value="run">Run Binary Search</button>
+        <button
+            type="submit"
+            value="set"
+            onClick={() => 
+                $(`.collection-unit`).css("background-color","#6c757d")
+                && $(`.unit-${targetNum}`).css("background-color","crimson")
+            }>Mark Target Number</button>
+        <button
+            type="submit"
+            value="run"
+        >Run Binary Search</button>
         <div className="flex-container">
         {
         collection ?

@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
     const [collection, setCollection] = useState([])
-    const [targetNum, setTargetNum] = useState(1)
+    const [targetNum, setTargetNum] = useState(0)
     const [runStatus, setRunStatus] = useState(false)
 
     useEffect(() => {
@@ -19,14 +19,15 @@ function App() {
     console.log(targetNum)
     return (
     <>
+        {
+        targetNum < 0 || targetNum > 1080 ?
+        alert("INVALID TARGET: Please enter a number between 1 and 1080...")
+        :
+        null
+        }
         <label>
             Target Number: <input type="number" min="1" max={collection.length} placeholder="1-1080" onChange={(e) => setTargetNum(e.target.value)} />
         </label>
-        {
-        targetNum < 1 || targetNum > 1080 || targetNum === "" ?
-        alert("INVALID TARGET: Please enter a number between 1 and 1080")
-        :null
-        }
         <button type="submit" value="set">Set Target Number</button>
         <button type="submit" value="run">Run Binary Search</button>
         <div className="flex-container">

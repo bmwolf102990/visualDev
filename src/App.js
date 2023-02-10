@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import $ from 'jquery';
 import './App.css';
 
-function App() {
+const App = () => {
     const [collection, setCollection] = useState([]);
     const [targetNum, setTargetNum] = useState(0);
 
     useEffect(() => {
         const handleCollectionGeneration = () => {
             let generatedCollection = []
-            for(let i=1; i <= 1080; i++) {
+            for(let i=1; i <= 1000; i++) {
                 generatedCollection.push(i);
             }
             setCollection(generatedCollection);
@@ -32,14 +32,16 @@ function App() {
             let endLimit = end;
             let mid = Math.floor((start + end) / 2);
 
-            if(collection[mid] === targetNum - 1) {
+            // $(`#unit-${mid}`).css("background-color","#6f42c1");
+
+            if(mid === targetNum - 1 || mid + 1 === targetNum - 1 || mid - 1 === targetNum - 1) {
                 setTimeout(() => {
                     $(`.collection-unit`).css("background-color","#6c757d");
                     $(`#unit-${targetNum}`).css("background-color","#ffc107");
                 }, timeout += 1000);
                 return mid;
             }
-            else if(collection[mid] < targetNum - 1) {
+            else if(mid < targetNum - 1) {
                 start = mid + 1;
                 startLimit = start;
                 endLimit = end;
@@ -52,7 +54,7 @@ function App() {
                 }, timeout += 1000);
                 continue;
             }
-            else if(collection[mid] > targetNum - 1) {
+            else if(mid > targetNum - 1) {
                 end = mid - 1;
                 startLimit = start;
                 endLimit = end;
@@ -73,12 +75,12 @@ function App() {
     return (
     <>
         {
-        targetNum < 0 || targetNum > 1080 ?
-        alert("INVALID TARGET: Please enter a number between 1 and 1080...")
+        targetNum < 0 || targetNum > 1000 ?
+        alert("INVALID TARGET: Please enter a number between 1 and 1000...")
         :null
         }
         <label>
-            Target Number: <input type="number" min="1" max={collection.length} placeholder="1-1080" onChange={(e) => setTargetNum(e.target.value)} />
+            Target Number: <input type="number" min="1" max={collection.length} placeholder="1-1000" onChange={(e) => setTargetNum(e.target.value)} />
         </label>
         <button type="submit" value="set" onClick={() => $(`.collection-unit`).css("background-color","#6c757d") && $(`#unit-${targetNum}`).css("background-color","#fd7e14")}>Mark Target Number</button>
         <button type="submit" value="run" onClick={() => handleSearch()}>Run Binary Search</button>

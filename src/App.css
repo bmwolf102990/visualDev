@@ -5,8 +5,27 @@ body {
 label {
     margin: 10px 10px 5px 10px;
 }
+#target-input {
+    padding: 3px 10px;
+    border:2px solid #212529;
+    border-radius: 3px;
+}
 button {
     margin: 0px 10px 0px 0px;
+}
+#set-btn {
+    background-color:#fd7e14;
+    border:2px solid #fd7e14;
+    border-radius: 3px;
+    color:#f8f9fa;
+    font-weight: bold;
+}
+#run-btn {
+    background-color:#0dcaf0;
+    border:2px solid #0dcaf0;
+    border-radius: 3px;
+    color:#f8f9fa;
+    font-weight: bold;
 }
 .flex-container {
     display: flex;

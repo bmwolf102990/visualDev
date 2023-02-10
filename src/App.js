@@ -80,10 +80,10 @@ const App = () => {
         :null
         }
         <label>
-            Target Number: <input type="number" min="1" max={collection.length} placeholder="1-1000" onChange={(e) => setTargetNum(e.target.value)} />
+            Target Number: <input id="target-input" type="number" min="1" max={collection.length} placeholder="1-1000" onChange={(e) => setTargetNum(e.target.value)} />
         </label>
-        <button type="submit" value="set" onClick={() => $(`.collection-unit`).css("background-color","#6c757d") && $(`#unit-${targetNum}`).css("background-color","#fd7e14")}>Mark Target Number</button>
-        <button type="submit" value="run" onClick={() => handleSearch()}>Run Binary Search</button>
+        <button id="set-btn" type="submit" value="set" onClick={() => $(`.collection-unit`).css("background-color","#6c757d") && $(`#unit-${targetNum}`).css("background-color","#fd7e14")}>Mark Target Number</button>
+        <button id="run-btn" type="submit" value="run" onClick={() => handleSearch()}>Run Binary Search</button>
         <div className="flex-container">
             {
             collection ?

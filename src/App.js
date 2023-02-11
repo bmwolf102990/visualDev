@@ -92,6 +92,7 @@ const App = () => {
         <div className="d-flex flex-wrap align-items-center justify-content-start mx-2 my-2">
             <button id="run" className="btn btn-outline-light  mx-1" type="submit" onClick={handleSearch}>Run Binary Search</button>
             <button id="clear" className="btn btn-outline-info mx-1 px-5" type="submit" onClick={() => setTargetNum(0)}>Clear</button>
+            <p className="mx-5 mt-3">Click on a box in the collection to select it as your search target, then click the "Run Binary Search" button</p>
         </div>
         <div className="d-flex flex-wrap align-items-center justify-content-center">
             {

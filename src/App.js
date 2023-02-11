@@ -89,12 +89,12 @@ const App = () => {
 
     return (
     <>
-        <div className="d-flex flex-wrap align-items-center justify-content-start mx-2 my-2">
-            <button id="run" className="btn btn-outline-light  mx-1" type="submit" onClick={handleSearch}>Run Binary Search</button>
-            <button id="clear" className="btn btn-outline-info mx-1 px-5" type="submit" onClick={() => setTargetNum(0)}>Clear</button>
-            <p className="mx-5 mt-3">Click on a box in the collection to select it as your search target, then click the "Run Binary Search" button</p>
+        <div className="d-flex flex-row flex-wrap align-items-center justify-content-start">
+            <button id="run" className="btn btn-outline-light mx-3 my-3" type="submit" onClick={handleSearch}>Run Binary Search</button>
+            <button id="clear" className="btn btn-outline-info my-3 px-5" type="submit" onClick={() => setTargetNum(0)}>Clear</button>
+            <p className="mt-3 mx-3">Click on a box in the collection to select it as your search target, then click the "Run Binary Search" button</p>
         </div>
-        <div className="d-flex flex-wrap align-items-center justify-content-center">
+        <div className="d-flex flex-wrap align-items-center justify-content-center mx-2 mb-3">
             {
             collection ?
             collection.map((unit) => <div key={unit} title={unit} id={`unit-${unit}`} className="collection-unit" onClick={(e) => setTargetNum(Number(e.target.title))}></div>)

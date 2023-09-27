@@ -10,6 +10,9 @@ const config: Config = {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
+    colors: {
+      'pink': '#ec4899'
+    },
     extend: {},
   },
   darkMode: 'class',

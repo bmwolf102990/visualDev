@@ -11,7 +11,10 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      'pink': '#ec4899'
+      'white': '#ffffff',
+      'black': '#000000',
+      'pink': '#ec4899',
+      'purple': '#6020a0',
     },
     extend: {},
   },

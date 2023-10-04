@@ -13,10 +13,10 @@
   position: absolute;
   transform-style: preserve-3d;
   perspective: 400px;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
+  left: 600px;
+  top: 200px;
+  bottom: 200px;
+  right: 600px;
   align-items: center;
   justify-content: center;
 }

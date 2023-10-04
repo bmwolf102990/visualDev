@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
 import { BsHeartFill, BsHouse } from "react-icons/bs";
 
 export const TopNav = ({ display, setDisplay }) => {

@@ -5,9 +5,9 @@ import { TopNav } from "../components/TopNav/TopNav";
 import { SideNav } from "../components/SideNav/SideNav";
 import { Footer } from "../components/Footer/Footer";
 import { VDSphere } from "../components/VDSphere/VDSphere";
-import { ImEye } from "react-icons/im";
-import Image from "next/image";
-import Typewriter from 'typewriter-effect'
+// import { ImEye } from "react-icons/im";
+// import Image from "next/image";
+// import Typewriter from 'typewriter-effect'
 
 export default function Home() {
   const [display, setDisplay] = useState("home");
@@ -32,8 +32,8 @@ export default function Home() {
                 width={100}
                 height={50}
               />
-              <span className="font-thin">
-              visualDev is a Web Development/SWE learning platform aimed at providing visual aid tools, along with supplemental resources, to allow you to learn by </span><ImEye className="scale-150 inline mx-1" fill="#ec4899" /><span className="font-thin"> the workings of:</span>
+              <span>
+              visualDev is a Web Development/SWE learning platform aimed at providing visual aid tools, along with supplemental resources, to allow you to learn by actually </span><ImEye className="scale-150 inline mx-1" fill="#ec4899" /><span> the workings of:</span>
               <div className="my-5">
                 <Typewriter
                   options={{
@@ -53,7 +53,9 @@ export default function Home() {
                 />
               </div>
             </div> */}
+            {/* ===== BACKGROUND ANIMATION ===== */}
             <VDSphere />
+            {/* ===== BACKGROUND ANIMATION ===== */}
           </>
         )}
         {display !== "home" && (

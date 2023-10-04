@@ -2,9 +2,13 @@
 import React from "react";
 import Image from "next/image";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
-import { BsHeartFill } from "react-icons/bs";
+import { BsHeartFill, BsHouse } from "react-icons/bs";
 
-export const Nav = () => {
+export const TopNav = ({ display, setDisplay }) => {
+
+    const handleSetDisplay = () => {
+        setDisplay("home");
+    }
 
     return(
         <Navbar maxWidth="full">
@@ -21,7 +25,13 @@ export const Nav = () => {
             </NavbarBrand>
             <NavbarContent justify="end">
                 <NavbarItem>
-                    <Button as={Link} color="secondary" href="#" variant="flat">
+                    {display !== "home" && (
+                        <Button as={Link} color="default" variant="flat" className="mx-3" onClick={handleSetDisplay}>
+                            <BsHouse fill="#ffffff" />
+                            Home
+                        </Button>
+                    )}
+                    <Button as={Link} color="default" href="#" variant="flat">
                         <BsHeartFill fill="#ec4899" />
                         Sponsor
                     </Button>

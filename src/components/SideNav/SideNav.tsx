@@ -18,6 +18,9 @@ export const SideNav = ({ setDisplay }) => {
             <Link className="p-10 border-l-4 border-purple hover:bg-gradient-to-r from-purple to-black" href="#" onClick={handleSetDisplay}>Lorem Ipsum</Link>
             <Link className="p-10 border-l-4 border-purple hover:bg-gradient-to-r from-purple to-black" href="#" onClick={handleSetDisplay}>Lorem Ipsum</Link>
             <Link className="p-10 border-l-4 border-purple hover:bg-gradient-to-r from-purple to-black" href="#" onClick={handleSetDisplay}>Lorem Ipsum</Link>
+            <Link className="p-10 border-l-4 border-purple hover:bg-gradient-to-r from-purple to-black" href="#" onClick={handleSetDisplay}>Lorem Ipsum</Link>
+            <Link className="p-10 border-l-4 border-purple hover:bg-gradient-to-r from-purple to-black" href="#" onClick={handleSetDisplay}>Lorem Ipsum</Link>
+            <Link className="p-10 border-l-4 border-purple hover:bg-gradient-to-r from-purple to-black" href="#" onClick={handleSetDisplay}>Lorem Ipsum</Link>
         </ScrollShadow>
   );
 }

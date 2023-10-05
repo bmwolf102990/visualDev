@@ -10,13 +10,15 @@ const config: Config = {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    colors: {
-      'white': '#ffffff',
-      'black': '#000000',
-      'pink': '#ec4899',
-      'purple': '#6020a0',
+    extend: {
+      colors: {
+        'white': '#ffffff',
+        'gray': '#9ca3af',
+        'black': '#000000',
+        'pink': '#ec4899',
+        'purple': '#6020a0',
+      },
     },
-    extend: {},
   },
   darkMode: 'class',
   plugins: [nextui({

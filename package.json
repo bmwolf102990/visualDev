@@ -31,6 +31,7 @@
     "eslint-config-prettier": "^9.0.0",
     "git": "^0.1.5",
     "husky": "^8.0.3",
+    "jquery": "^3.7.1",
     "pnpm": "^8.8.0",
     "postcss": "^8.4.30",
     "prettier": "^3.0.3",

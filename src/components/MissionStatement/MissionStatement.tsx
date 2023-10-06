@@ -21,17 +21,12 @@ export const MissionStatement = () => {
                 <Typewriter
                   options={{
                     strings: [
-                      "Lorem Ipsum 0",
-                      "Lorem Ipsum 1",
-                      "Lorem Ipsum 2",
-                      "Lorem Ipsum 3",
-                      "Lorem Ipsum 4",
-                      "Lorem Ipsum 5",
+                      "Binary Search",
                     ],
                     wrapperClassName:'',
                     cursorClassName: 'text-pink',
                     autoStart: true,
-                    loop: true,
+                    loop: false,
                   }}
                 />
               </div>

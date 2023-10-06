@@ -6,7 +6,7 @@ import Typewriter from 'typewriter-effect'
 export const MissionStatement = () => {
 
     return(
-        <div className="z-10 col-start-2 col-end-4 self-center p-24 text-justify">
+        <div className="z-10 col-start-2 col-end-4 self-center p-32 text-justify">
               <Image
                 className="mx-auto"
                 src="/visualdev.svg"

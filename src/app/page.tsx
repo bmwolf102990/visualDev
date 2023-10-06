@@ -30,7 +30,10 @@ export default function Home() {
           </>
         )}
         {display !== "home" && (
-          <ToolCanvas />
+          <ToolCanvas 
+            display={display}
+            setDisplay={setDisplay}
+          />
         )}
       </div>
       <Footer />

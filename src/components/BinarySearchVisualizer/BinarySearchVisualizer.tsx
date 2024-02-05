@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "@nextui-org/react";
 import $ from 'jquery';
+import { Button } from "@nextui-org/react";
 
 export const BinarySearchVisualizer = () => {
     const [collectionSize, setCollectionSize] = useState(506);

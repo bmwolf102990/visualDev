@@ -32,7 +32,7 @@
     "eslint-config-next": "^13.5.3",
     "eslint-config-prettier": "^9.0.0",
     "git": "^0.1.5",
-    "husky": "^8.0.3",
+    "husky": "^9.0.10",
     "jquery": "^3.7.1",
     "pnpm": "^8.8.0",
     "postcss": "^8.4.30",

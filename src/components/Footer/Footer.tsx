@@ -10,6 +10,9 @@ export const Footer = () => {
                 <span><AiOutlineCopyright className="inline"/> 2023 visualDev</span>
             </div>
             <span>developed with <BsHeart className="inline"/> by <a className="underline hover:text-pink" href="https://github.com/bmwolf102990">bryan wolf</a> & <a className="underline hover:text-pink" href="#">open source community</a></span>
+
+            <span>dsjfhasdlk;fjs</span>
+            <div>skdjfhasdlkfhasdlkfjas</div>
             <div>lvjkahsf;glkzshjdf;glaskjdfg'</div>
         </footer>
     );
